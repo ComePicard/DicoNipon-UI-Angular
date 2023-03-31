@@ -1,0 +1,11 @@
+div{
+  
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+table{
+  min-width: 75vw !important;
+  max-width: 75vw !important;
+}

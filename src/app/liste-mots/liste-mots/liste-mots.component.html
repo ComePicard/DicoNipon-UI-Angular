@@ -1,0 +1,35 @@
+<div>
+  <table mat-table [dataSource]=dataSource class="mat-elevation-z8">
+    <ng-container matColumnDef="kanji">
+      <th mat-header-cell *matHeaderCellDef> Kanji </th>
+      <td mat-cell *matCellDef="let element"> {{element.kanji}} </td>
+    </ng-container>
+    <ng-container matColumnDef="hiragana">
+      <th mat-header-cell *matHeaderCellDef> Hiragana </th>
+      <td mat-cell *matCellDef="let element"> {{element.hiragana}} </td>
+    </ng-container>
+    <ng-container matColumnDef="katakana">
+      <th mat-header-cell *matHeaderCellDef> Katakana </th>
+      <td mat-cell *matCellDef="let element"> {{element.katakana}} </td>
+    </ng-container>
+    <ng-container matColumnDef="traduction">
+      <th mat-header-cell *matHeaderCellDef> Traduction </th>
+      <td mat-cell *matCellDef="let element"> {{element.traduction}} </td>
+    </ng-container>
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef> Type </th>
+      <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+    </ng-container>
+    <ng-container matColumnDef="categorie">
+      <th mat-header-cell *matHeaderCellDef> Categorie </th>
+      <td mat-cell *matCellDef="let element"> {{element.categorie}} </td>
+    </ng-container>
+    <ng-container matColumnDef="groupe">
+      <th mat-header-cell *matHeaderCellDef> Groupe </th>
+      <td mat-cell *matCellDef="let element"> {{element.groupe}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
