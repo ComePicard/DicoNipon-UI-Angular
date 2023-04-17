@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListeMotsComponent } from './liste-mots/liste-mots.component';
 import { MatTableModule } from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { MatTableModule } from '@angular/material/table';
   ],
   imports: [
     CommonModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
   ],
   exports: [
     ListeMotsComponent
