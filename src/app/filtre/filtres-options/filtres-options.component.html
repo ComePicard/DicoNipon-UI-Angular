@@ -1,1 +1,29 @@
-<p>filtres-options works!</p>
+<h2>Filtres :</h2>
+<div id="options_div">
+  <mat-form-field appearance="fill">
+    <mat-label>Type :</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let type of types" [value]='type'>
+        {{type}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Groupe :</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let groupe of groupes" [value]='groupe'>
+        {{groupe}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Catégorie :</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let categorie of categories" [value]='categorie'>
+        {{categorie}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

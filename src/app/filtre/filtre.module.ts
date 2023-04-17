@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { TerminaisonComponent } from './terminaison/terminaison.component';
-import { FiltresOptionsComponent } from './filtres-options/filtres-options.component';
-
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {TerminaisonComponent} from './terminaison/terminaison.component';
+import {FiltresOptionsComponent} from './filtres-options/filtres-options.component';
+import {MatChipsModule} from '@angular/material/chips';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -11,7 +12,14 @@ import { FiltresOptionsComponent } from './filtres-options/filtres-options.compo
     FiltresOptionsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatChipsModule,
+    MatSelectModule
+  ],
+  exports: [
+    TerminaisonComponent,
+    FiltresOptionsComponent
   ]
 })
-export class FiltreModule { }
+export class FiltreModule {
+}
