@@ -1,32 +1,32 @@
 <div>
   <table mat-table [dataSource]=dataSource class="mat-elevation-z8">
-    <ng-container matColumnDef="kanji">
+    <ng-container matColumnDef="mot_kanji">
       <th mat-header-cell *matHeaderCellDef> Kanji </th>
-      <td mat-cell *matCellDef="let element"> {{element.kanji}} </td>
+      <td mat-cell *matCellDef="let mot"> {{mot.mot_kanji}} </td>
     </ng-container>
-    <ng-container matColumnDef="hiragana">
+    <ng-container matColumnDef="mot_hiragana">
       <th mat-header-cell *matHeaderCellDef> Hiragana </th>
-      <td mat-cell *matCellDef="let element"> {{element.hiragana}} </td>
+      <td mat-cell *matCellDef="let mot"> {{mot.mot_hiragana}} </td>
     </ng-container>
-    <ng-container matColumnDef="katakana">
+    <ng-container matColumnDef="mot_katakana">
       <th mat-header-cell *matHeaderCellDef> Katakana </th>
-      <td mat-cell *matCellDef="let element"> {{element.katakana}} </td>
+      <td mat-cell *matCellDef="let mot"> {{mot.mot_katakana}}  </td>
     </ng-container>
     <ng-container matColumnDef="traduction">
       <th mat-header-cell *matHeaderCellDef> Traduction </th>
-      <td mat-cell *matCellDef="let element"> {{element.traduction}} </td>
+      <td mat-cell *matCellDef="let mot"> {{mot.traduction}} </td>
     </ng-container>
     <ng-container matColumnDef="type">
       <th mat-header-cell *matHeaderCellDef> Type </th>
-      <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+      <td mat-cell *matCellDef="let mot"> {{mot.type}} </td>
     </ng-container>
     <ng-container matColumnDef="categorie">
       <th mat-header-cell *matHeaderCellDef> Categorie </th>
-      <td mat-cell *matCellDef="let element"> {{element.categorie}} </td>
+      <td mat-cell *matCellDef="let mot"> {{mot.categorie}} </td>
     </ng-container>
     <ng-container matColumnDef="groupe">
       <th mat-header-cell *matHeaderCellDef> Groupe </th>
-      <td mat-cell *matCellDef="let element"> {{element.groupe}} </td>
+      <td mat-cell *matCellDef="let mot"> {{mot.groupe}} </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
