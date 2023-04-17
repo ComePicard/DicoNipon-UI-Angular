@@ -1,4 +1,11 @@
+import { HttpClient } from '@angular/common/http';
 import {Component} from '@angular/core';
+import { CategoriesService } from 'src/app/shared/services/categories.service';
+
+export interface Categorie{
+  id_categorie: number;
+  nom_categorie: String;
+}
 
 @Component({
   selector: 'app-filtres-options',
@@ -18,10 +25,13 @@ export class FiltresOptionsComponent {
     3
   ];
 
-  categories: string[] = [
-    "Global",
-    "Animal domestique",
-    "Animal sauvage",
-    "Appareil domestique"
-  ];
+  categories: Categorie[] = [];
+
+  constructor(private categorieService: CategoriesService){
+    categorieService.getCategories().subscribe({
+      complete(){},
+      error(err){},
+      next: value => this.categories = value
+    })
+  }
 }

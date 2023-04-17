@@ -22,7 +22,7 @@
     <mat-label>Catégorie :</mat-label>
     <mat-select>
       <mat-option *ngFor="let categorie of categories" [value]='categorie'>
-        {{categorie}}
+        {{categorie.nom_categorie}}
       </mat-option>
     </mat-select>
   </mat-form-field>

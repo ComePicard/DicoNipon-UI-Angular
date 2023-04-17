@@ -4,6 +4,7 @@ import {TerminaisonComponent} from './terminaison/terminaison.component';
 import {FiltresOptionsComponent} from './filtres-options/filtres-options.component';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatSelectModule} from '@angular/material/select';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {MatSelectModule} from '@angular/material/select';
   imports: [
     CommonModule,
     MatChipsModule,
-    MatSelectModule
+    MatSelectModule,
+    HttpClientModule
   ],
   exports: [
     TerminaisonComponent,
