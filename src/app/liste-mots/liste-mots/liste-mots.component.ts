@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
+import { MotsService } from 'src/app/shared/services/mots.service';
 
 enum type_enum {
   Nom_commun = "Nom commun",
@@ -7,33 +8,35 @@ enum type_enum {
 };
 
 export interface Mot{
-  kanji?: string;
-  hirargana?: string;
-  katakana?: string;
+  id_mot?: number;
+  id_kanji_to_kana?: number;
+  mot_kanji?: string;
+  mot_hiragana?: string;
+  mot_katakana?: string;
   traduction?: string;
   type?: type_enum;
   categorie?: string;
   groupe?: number;
 }
 
-const ELEMENT_DATA: Mot[] = [
-  { kanji: "人", hirargana: "ひと", katakana: "ニン", traduction: "La personne", type: type_enum.Nom_commun, categorie: "Global"},
-  { kanji: "猫", hirargana: "ねこ", traduction: "Le chat", type: type_enum.Nom_commun, categorie: "Animal domestique"},
-  { kanji: "犬", hirargana: "いぬ", traduction: "Le chien", type: type_enum.Nom_commun, categorie: "Animal domestique"},
-  { kanji: "山", hirargana: "やま", katakana: "サン", traduction: "La montagne", type: type_enum.Nom_commun, categorie: "Global"},
-  { kanji: "食べる", hirargana: "たべる", traduction: "Manger", type: type_enum.Verbe, groupe: 2},
-];
-
 @Component({
   selector: 'app-liste-mots',
   templateUrl: './liste-mots.component.html',
   styleUrls: ['./liste-mots.component.css']
 })
-
 export class ListeMotsComponent {
-  displayedColumns: string[] = ['kanji', 'hiragana', 'katakana', 'traduction', 'type', 'categorie', 'groupe'];
-  dataSource = ELEMENT_DATA;
+  displayedColumns: string[] = ['mot_kanji', 'mot_hiragana', 'mot_katakana', 'traduction', 'type', 'categorie', 'groupe'];
 
-  constructor(){
+  dataSource: Mot[] = [];
+
+  constructor(private motService: MotsService){
+    motService.getMots().subscribe({
+      complete() {
+      },
+      error(err) {
+      },
+      next: value => this.dataSource = value
+    });
   }
+
 }
