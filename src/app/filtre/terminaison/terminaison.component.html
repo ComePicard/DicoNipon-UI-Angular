@@ -1,14 +1,14 @@
 <div id="terminaison_div">
   <h2>Terminaison :</h2>
   <mat-chip-listbox aria-label="Terminaison">
-    <mat-chip-option>う</mat-chip-option>
-    <mat-chip-option>く</mat-chip-option>
-    <mat-chip-option>ぐ</mat-chip-option>
-    <mat-chip-option>す</mat-chip-option>
-    <mat-chip-option>つ</mat-chip-option>
-    <mat-chip-option>ぬ</mat-chip-option>
-    <mat-chip-option>ぶ</mat-chip-option>
-    <mat-chip-option>む</mat-chip-option>
-    <mat-chip-option>る</mat-chip-option>
+    <mat-chip-option (click)="getTerminaison()" [value]="terminaison">う</mat-chip-option>
+    <mat-chip-option (click)="getTerminaison()" [value]="terminaison">く</mat-chip-option>
+    <mat-chip-option (click)="getTerminaison()" [(ngModel)]="terminaison" [value]="ぐ">ぐ</mat-chip-option>
+    <mat-chip-option (click)="getTerminaison()" [value]="terminaison">す</mat-chip-option>
+    <mat-chip-option (click)="getTerminaison()" [value]="terminaison">つ</mat-chip-option>
+    <mat-chip-option (click)="getTerminaison()" [value]="terminaison">ぬ</mat-chip-option>
+    <mat-chip-option (click)="getTerminaison()" [value]="terminaison">ぶ</mat-chip-option>
+    <mat-chip-option (click)="getTerminaison()" [value]="terminaison">む</mat-chip-option>
+    <mat-chip-option (click)="getTerminaison()" [value]="terminaison">る</mat-chip-option>
   </mat-chip-listbox>
 </div>

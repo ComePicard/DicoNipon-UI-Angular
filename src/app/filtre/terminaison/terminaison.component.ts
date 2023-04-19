@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./terminaison.component.css']
 })
 export class TerminaisonComponent {
+  terminaison: String = "";
 
+  getTerminaison(){
+    console.log(this.terminaison);
+  }
 }
