@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-terminaison',
@@ -6,9 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./terminaison.component.css']
 })
 export class TerminaisonComponent {
-  terminaison: String = "";
+  @Output() terminaisonSent = new EventEmitter<string>();
+  stock_terminaison: string = ""
 
-  getTerminaison(){
-    console.log(this.terminaison);
+  sendTerminaison(terminaison: string): void {
+    this.stock_terminaison = this.stock_terminaison === terminaison ? "" : terminaison;
+    this.terminaisonSent.emit(this.stock_terminaison);
   }
 }
