@@ -1,0 +1,7 @@
+<app-nav></app-nav>
+<div id="filtre">
+  <app-filtres-options (categorieSend)="setCategorie($event)" (groupeSend)="setGroupe($event)"
+                       (typeSend)="setType($event)"></app-filtres-options>
+  <app-terminaison (terminaisonSent)="setTerminaison($event)"></app-terminaison>
+</div>
+<app-liste-mots [categorie]="categorie" [groupe]="groupe" [terminaison]="terminaison" [type]="type"></app-liste-mots>

@@ -34,4 +34,20 @@ export class MotsService {
   getMotsGroupe(groupe: string): Observable<Mot[]> {
     return this.http.get<Mot[]>(url + "mots_groupe/" + groupe);
   }
+
+  to_valid_type(type_to_change: string): string {
+    let type: string = type_to_change
+    switch (type_to_change) {
+      case "Nom commun":
+        type = "nom_commun";
+        break;
+      case "Adverbe":
+        type = "adverbe";
+        break;
+      case "Verbe":
+        type = "verbe";
+        break;
+    }
+    return type;
+  }
 }

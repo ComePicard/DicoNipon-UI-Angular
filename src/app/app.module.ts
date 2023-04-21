@@ -8,10 +8,12 @@ import {ListeMotsModule} from './liste-mots/liste-mots.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {FiltreModule} from "./filtre/filtre.module";
+import { DictionnaireComponent } from './dictionnaire/dictionnaire.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DictionnaireComponent,
   ],
   imports: [
     BrowserModule,

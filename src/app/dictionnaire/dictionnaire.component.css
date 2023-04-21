@@ -1,0 +1,7 @@
+#filtre {
+  display: flex;
+  justify-content: start;
+  gap: 5em;
+  padding-left: 2em;
+  padding-bottom: 5em;
+}

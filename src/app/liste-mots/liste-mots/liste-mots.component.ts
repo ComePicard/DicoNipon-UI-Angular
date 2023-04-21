@@ -46,30 +46,13 @@ export class ListeMotsComponent {
     });
   }
 
-  to_valid_type(type_to_change: string): string {
-    let type: string = type_to_change
-    switch (type_to_change) {
-      case "Nom commun":
-        type = "nom_commun";
-        break;
-      case "Adverbe":
-        type = "adverbe";
-        break;
-      case "Verbe":
-        type = "verbe";
-        break;
-    }
-    return type;
-  }
-
   ngOnChanges(): void {
     if (
       this.terminaison !== ""
       || this.type !== "Tous"
       || this.groupe !== "Tous"
     ) {
-      console.log(this.terminaison !== "", this.type !== "Tous", this.groupe !== "Tous")
-      this.type = this.to_valid_type(this.type);
+      this.type = this.motService.to_valid_type(this.type);
       this.motService.filtreListeMot(this.type, this.groupe, this.categorie, this.terminaison).subscribe({
         complete(): void {
         },
@@ -78,7 +61,6 @@ export class ListeMotsComponent {
         next: value => this.dataSource = value
       })
     } else {
-      console.log("entier")
       this.motService.getMots().subscribe({
         complete(): void {
         },
