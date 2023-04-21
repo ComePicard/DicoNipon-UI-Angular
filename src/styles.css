@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'gen_jyuu';
+  src: url('../../../assets/fonts/Gen_Jyuu_Gothic_L_Monospace_Normal.ttf') format('truetype');
+  font-family: 'gen_jyuu_bold';
+  src: url('../../../assets/fonts/Gen_Jyuu_Gothic_L_Monospace_Bold.ttf') format('truetype');
+}
+
 body{
   margin: 0;
 }

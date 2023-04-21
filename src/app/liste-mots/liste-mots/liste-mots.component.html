@@ -1,14 +1,14 @@
 <div>
   <table mat-table [dataSource]=dataSource class="mat-elevation-z8">
-    <ng-container matColumnDef="mot_kanji">
+    <ng-container matColumnDef="mot_kanji" class="jap_font">
       <th mat-header-cell *matHeaderCellDef> Kanji </th>
       <td mat-cell *matCellDef="let mot"> {{mot.mot_kanji}} </td>
     </ng-container>
-    <ng-container matColumnDef="mot_hiragana">
+    <ng-container matColumnDef="mot_hiragana" class="jap_font">
       <th mat-header-cell *matHeaderCellDef> Hiragana </th>
       <td mat-cell *matCellDef="let mot"> {{mot.mot_hiragana}} </td>
     </ng-container>
-    <ng-container matColumnDef="mot_katakana">
+    <ng-container matColumnDef="mot_katakana" class="jap_font">
       <th mat-header-cell *matHeaderCellDef> Katakana </th>
       <td mat-cell *matCellDef="let mot"> {{mot.mot_katakana}}  </td>
     </ng-container>

@@ -14,9 +14,11 @@ body{
 
 #titre {
   padding-left: 3em;
+  margin-bottom: 0;
   font-size: 20px;
   color:white;
   text-align: center;
+  font-family: 'gen_jyuu_bold';
 }
 
 #menu {

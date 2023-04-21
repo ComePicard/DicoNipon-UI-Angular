@@ -1,7 +1,7 @@
 #filtre {
+  min-width: 100vw;
   display: flex;
-  justify-content: start;
-  gap: 5em;
-  padding-left: 2em;
+  justify-content: space-around;
   padding-bottom: 5em;
+  padding-top: 1em;
 }
