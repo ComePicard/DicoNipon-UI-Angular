@@ -35,7 +35,7 @@ export class ListeMotsComponent {
 
   dataSource: Mot[] = [];
 
-  constructor(private motService: MotsService) {
+  constructor(public motService: MotsService) {
     motService.getMots().subscribe({
       complete(): void {
       },

@@ -50,4 +50,20 @@ export class MotsService {
     }
     return type;
   }
+
+  to_beautiful_type(type_to_change: string): string{
+    let type: string = type_to_change
+    switch (type_to_change) {
+      case "nom_commun":
+        type = "Nom commun";
+        break;
+      case "adverbe":
+        type = "Adverbe";
+        break;
+      case "verbe":
+        type = "Verbe";
+        break;
+    }
+    return type;
+  }
 }

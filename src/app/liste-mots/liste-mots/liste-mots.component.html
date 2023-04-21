@@ -18,7 +18,7 @@
     </ng-container>
     <ng-container matColumnDef="type">
       <th mat-header-cell *matHeaderCellDef> Type </th>
-      <td mat-cell *matCellDef="let mot"> {{mot.type}} </td>
+      <td mat-cell *matCellDef="let mot"> {{this.motService.to_beautiful_type(mot.type)}} </td>
     </ng-container>
     <ng-container matColumnDef="categorie">
       <th mat-header-cell *matHeaderCellDef> Categorie </th>
