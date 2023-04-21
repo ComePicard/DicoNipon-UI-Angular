@@ -9,11 +9,15 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {FiltreModule} from "./filtre/filtre.module";
 import { DictionnaireComponent } from './dictionnaire/dictionnaire.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { EntrainementComponent } from './entrainement/entrainement.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DictionnaireComponent,
+    PageNotFoundComponent,
+    EntrainementComponent,
   ],
   imports: [
     BrowserModule,
