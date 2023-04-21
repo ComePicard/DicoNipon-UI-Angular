@@ -11,6 +11,7 @@ import {FiltreModule} from "./filtre/filtre.module";
 import { DictionnaireComponent } from './dictionnaire/dictionnaire.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { EntrainementComponent } from './entrainement/entrainement.component';
+import { BaptisteBlandetComponent } from './baptiste-blandet/baptiste-blandet.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { EntrainementComponent } from './entrainement/entrainement.component';
     DictionnaireComponent,
     PageNotFoundComponent,
     EntrainementComponent,
+    BaptisteBlandetComponent,
   ],
   imports: [
     BrowserModule,
