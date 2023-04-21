@@ -52,18 +52,8 @@ export class MotsService {
   }
 
   to_beautiful_type(type_to_change: string): string{
-    let type: string = type_to_change
-    switch (type_to_change) {
-      case "nom_commun":
-        type = "Nom commun";
-        break;
-      case "adverbe":
-        type = "Adverbe";
-        break;
-      case "verbe":
-        type = "Verbe";
-        break;
-    }
-    return type;
+    const firstChar = type_to_change.charAt(0).toUpperCase();
+    const formattedStr = type_to_change.substring(1).replace(/_/g, ' ');
+    return `${firstChar}${formattedStr}`;
   }
 }
